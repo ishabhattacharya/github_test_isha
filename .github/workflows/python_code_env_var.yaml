@@ -12,9 +12,9 @@ jobs:
     - run: echo "$GLOBAL_MESSAGE"
 
   greet:
-    runs-on: ubuntu-latesr
+    runs-on: ubuntu-latest
     env:
-      GREETING_MESSAGE: 'Hello, World!'
+      GREETING_MESSAGE: 'Hello, World from Isha!'
     steps:
     - uses: actions/setup-python@v4
       with:
