@@ -2,7 +2,7 @@ name: Simple Workflow
 on : push
 jobs:
   build:
-    run-on: ubuntu-latest
+    runs-on: ubuntu-latest
     steps:
       - name: Hello World execution
         run: echo "Hello, BA!"
