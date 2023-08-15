@@ -1,0 +1,23 @@
+name: Build and Greet using Environment Variables
+on: push
+env: 
+  GLOBAL_MESSAGE: 'This is a global message!'
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/setup-python@v4
+      with:
+        python-version: '3.9'
+    - run: python -c "print(f'{env.GLOBAL_MESSAGE}')"
+
+  greet:
+    runs-on: ubuntu-latesr
+    env:
+      GREETING_MESSAGE: 'Hello, World!'
+    steps:
+    - uses: actions/setup-python@v4
+      with:
+        python-version: '3.9'
+    - run: python -c "print('f'{env.GREETING_MESSAGE}')"
+
