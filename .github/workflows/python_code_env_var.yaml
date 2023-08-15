@@ -9,7 +9,7 @@ jobs:
     - uses: actions/setup-python@v4
       with:
         python-version: '3.9'
-    - run: python -c "print(f'{env.GLOBAL_MESSAGE}')"
+    - run: echo "$GLOBAL_MESSAGE"
 
   greet:
     runs-on: ubuntu-latesr
@@ -19,5 +19,5 @@ jobs:
     - uses: actions/setup-python@v4
       with:
         python-version: '3.9'
-    - run: python -c "print('f'{env.GREETING_MESSAGE}')"
+    - run: echo "$GREETING_MESSAGE"
 
